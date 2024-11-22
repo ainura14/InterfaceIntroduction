@@ -16,4 +16,21 @@ public class StudentServiceImpl implements StudentService {
     public void addStudentByGroupName(String groupName, Student newStudent) {
         groupDAO.addStudentByGroupName(groupName, newStudent);
     }
+
+    @Override
+    public Student[] getAllStudent() {
+        return groupDAO.getAllStudent();
+    }
+
+    @Override
+    public Student findStudentById(long id) {
+        return groupDAO.findStudentById(id);
+    }
+
+    @Override
+    public void findByStudentName(String studentName) {
+        groupDAO.findByStudentName(studentName);
+    }
+
+
 }

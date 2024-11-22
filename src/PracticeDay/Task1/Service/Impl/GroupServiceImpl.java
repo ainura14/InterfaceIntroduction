@@ -20,4 +20,19 @@ public class GroupServiceImpl implements GroupService {
     public Group[] getAllgroup() {
         return groupDAO.getAllgroup();
     }
+
+    @Override
+    public void deleteGroupById(long groupId) {
+        groupDAO. deleteGroupById(groupId);
+    }
+
+    @Override
+    public Group findGroupById(long groupId) {
+        return groupDAO.findGroupById(groupId);
+    }
+
+    @Override
+    public void findByGroupName(String name) {
+        groupDAO.findByGroupName(name);
+    }
 }
